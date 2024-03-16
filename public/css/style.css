@@ -1,0 +1,8 @@
+body,
+html {
+  background-color: slategray;
+}
+
+.dev {
+  border: 2px solid red;
+}

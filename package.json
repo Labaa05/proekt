@@ -1,0 +1,17 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "admin.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@picocss/pico": "^2.0.6",
+    "express": "^4.18.3",
+    "sqlite3": "^5.1.7"
+  }
+}
