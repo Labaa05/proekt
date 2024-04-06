@@ -1,113 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">  
-    <link rel="stylesheet" href="css/pico.min.css">
-    
-</head>
-    <body>
-        <header>
-            <nav>
-            <ul>
-              <li><strong>Acme Corp</strong></li>
-            </ul>
-            <ul>
-              <li><a href="/index.html">About</a></li>
-              <li><a href="/items.html">Items</a></li>
-              <li><a href="/signin.html">Register</a></li>
-            </ul>
-          </nav>
-        </header>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <!-- <script defer>
+      window.addEventListener("load", () => {
+        const button = document.getElementById("user");
+        button.addEventListener("click", (e) => {
+          fetch("/me");
+        });
+      });
+    </script> -->
+  </head>
+  <body>
+    <header id="header-placeholder"></header>
+    <main class="container">
+      <section class="grid">
+        <form id="register" action="/signin" method="post">
+          <h3>Register</h3>
+          <fieldset>
+            <label>
+              Username
+              <input
+                name="username"
+                type="text"
+                placeholder="Username"
+                autocomplete="given-name"
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                autocomplete="email"
+              />
+            </label>
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                autocomplete="password"
+              /> </label
+            ><label>
+              Confirm Password
+              <input
+                type="password"
+                name="confirmpassword"
+                placeholder="Password"
+                autocomplete="email"
+              />
+            </label>
+          </fieldset>
 
+          <input type="submit" value="Register" />
+        </form>
 
-        <main class="container">
-            <section class="grid">
-                <form id="register" action="/signin">
-                    <h3>Register</h3>
-                    <fieldset>
-                      <label>
-                        Username
-                        <input
-                          name="username"
-                          type="text"
-                          placeholder="Username"
-                          autocomplete="given-name"
-                        />
-                      </label>
-                      <label>
-                        Email
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          autocomplete="email"
-                        />
-                      </label>
-                      <label>
-                        Password
-                        <input
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          autocomplete="password"
-                        />
-                      </label><label>
-                        Confirm Password
-                        <input
-                          type="password"
-                          name="confirmpassword"
-                          placeholder="Password"
-                          autocomplete="email"
-                        />
-                      </label>
-                    </fieldset>
-                  
-                    <input
-                      type="submit"
-                      value="Register"
-                    />
-                  </form>
+        <form action="/login" method="post">
+          <h3>Log in</h3>
+          <fieldset>
+            <label>
+              Username
+              <input
+                name="username"
+                placeholder="Username"
+                autocomplete="given-name"
+              />
+            </label>
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                autocomplete="password"
+              />
+            </label>
+          </fieldset>
 
-                  <form>
-                    <h3>Log in</h3>
-                    <fieldset>
-                      <label>
-                        Username
-                        <input
-                          name="username"
-                          placeholder="Username"
-                          autocomplete="given-name"
-                        />
-                      </label>
-                      <label>
-                        Password
-                        <input
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          autocomplete="password"
-                        />
-                      </label>
-                    </fieldset>
-                  
-                    <input
-                      type="submit"
-                      value="Log in"
-                    />
-                  </form>
-            </section>
-        </main>
+          <input type="submit" value="Log in" />
+        </form>
+      </section>
+    </main>
 
-
-        <footer>
-
-        </footer>
-        <script>
-          const registerform = document.getElementById("register")  
-        </script>
-      </body>
-
+    <footer id="footer-placeholder"></footer>
+  </body>
+  <script src="/js/common.js"></script>
 </html>
